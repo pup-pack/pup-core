@@ -50,7 +50,6 @@ class PyprojectInfo:
     scripts: dict[str, str]
     build_backend: str
     uv_default_groups: tuple[str, ...] | Literal["all"] | None
-    pyright_python_version: str
     ruff_target_version: str
     pytest_testpaths: tuple[str, ...]
     pytest_addopts: str

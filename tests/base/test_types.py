@@ -70,7 +70,6 @@ def test_pyproject_info() -> None:
         scripts={"example": "example.cli:main"},
         build_backend="hatchling.build",
         uv_default_groups="all",
-        pyright_python_version="3.15",
         ruff_target_version="py315",
         pytest_testpaths=("tests",),
         pytest_addopts="--cov=example",

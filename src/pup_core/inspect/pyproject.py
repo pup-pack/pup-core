@@ -37,7 +37,6 @@ def inspect_pyproject(root: Path) -> PyprojectInfo:
 
     tool = _mapping(data.get("tool"))
     uv = _mapping(tool.get("uv"))
-    pyright = _mapping(tool.get("pyright"))
     ruff = _mapping(tool.get("ruff"))
 
     pytest = _mapping(tool.get("pytest"))
@@ -62,7 +61,6 @@ def inspect_pyproject(root: Path) -> PyprojectInfo:
         scripts=_string_mapping(project.get("scripts")),
         build_backend=_string(build_system.get("build-backend")),
         uv_default_groups=_uv_default_groups(uv.get("default-groups")),
-        pyright_python_version=_string(pyright.get("pythonVersion")),
         ruff_target_version=_string(ruff.get("target-version")),
         pytest_testpaths=_string_tuple(pytest_ini.get("testpaths")),
         pytest_addopts=_string(pytest_ini.get("addopts")),

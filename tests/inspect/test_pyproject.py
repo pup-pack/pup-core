@@ -30,9 +30,6 @@ requires = ["hatchling", "hatch-vcs"]
 [tool.uv]
 default-groups = "all"
 
-[tool.pyright]
-pythonVersion = "3.15"
-
 [tool.ruff]
 target-version = "py315"
 
@@ -74,7 +71,6 @@ def test_inspect_pyproject(tmp_path: Path) -> None:
     assert info.scripts == {"example": "example.cli:main"}
     assert info.build_backend == "hatchling.build"
     assert info.uv_default_groups == "all"
-    assert info.pyright_python_version == "3.15"
     assert info.ruff_target_version == "py315"
     assert info.pytest_testpaths == ("tests",)
     assert info.pytest_addopts == "--cov=example --cov-fail-under=60"

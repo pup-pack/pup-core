@@ -13,6 +13,29 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.2.0] - 2026-08-26
+
+### Added
+
+- Shared canonical template types, fetching, layering, and rendering.
+- Shared Git file-history inspection.
+- Shared repository file comparison primitives.
+- Python source-file inspection and module docstring extraction.
+- GitHub Actions workflow inspection and action-version classification.
+- Human-readable repository feature catalog for shared inspection capabilities.
+- Tests for template, comparison, Python source, and GitHub Actions inspection.
+
+### Changed
+
+- Expanded `pup-core` from basic repository inspection into the shared
+  repository-intelligence layer for the PUP tool family.
+- Prepared template and inspection functionality for reuse by `pup-up`,
+  `pup-down`, `pup-check`, and repository explorer applications.
+- Standardized GitHub Action version inspection to distinguish moving major
+  versions from exact version pins.
+
+---
+
 ## [0.1.3] - 2026-08-13
 
 - updated actions (one source of python version in project root)
@@ -89,12 +112,6 @@ Follow these steps when creating a new release.
 ### Task 2. Validate
 
 ```shell
-uvx pup-clean@latest --delete
-uvx pup-up@latest --write
-.\sit.ps1
-
-# OR
-
 uv lock --upgrade
 uv sync
 
@@ -142,7 +159,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/pup-pack/pup-core/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/pup-pack/pup-core/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/pup-pack/pup-core/releases/tag/v0.2.0
 [0.1.3]: https://github.com/pup-pack/pup-core/releases/tag/v0.1.3
 [0.1.1]: https://github.com/pup-pack/pup-core/releases/tag/v0.1.1
 [0.1.0]: https://github.com/pup-pack/pup-core/releases/tag/v0.1.0

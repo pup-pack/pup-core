@@ -58,7 +58,7 @@ def _run_git(root: Path, *args: str) -> str:
     if git_executable is None:
         return ""
 
-    result = subprocess.run(  # noqa: S603 - executable and arguments are controlled internally.
+    result = subprocess.run(
         [git_executable, *args],
         cwd=root,
         capture_output=True,

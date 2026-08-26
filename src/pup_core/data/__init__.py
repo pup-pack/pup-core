@@ -1,0 +1,1 @@
+"""Packaged pup-core data."""

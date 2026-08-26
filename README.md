@@ -3,8 +3,11 @@
 [![PyPI](https://img.shields.io/pypi/v/pup-core?logo=pypi&label=pypi)](https://pypi.org/project/pup-core/)
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://pup-pack.github.io/pup-core/)
 [![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/pup-pack/pup-core)
-[![Python 3.15](https://img.shields.io/badge/python-3.15%2B-blue?logo=python)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
+[![Python 3.15](https://img.shields.io/badge/python-3.15%2B-blue?logo=python)](https://github.com/pup-pack/pup-core/blob/main/pyproject.toml)
+[![uv managed](https://img.shields.io/badge/uv-managed-DE5FE9)](https://docs.astral.sh/uv/)
+[![ty type checked](https://img.shields.io/badge/ty-type_checked-2F80ED)](https://docs.astral.sh/ty/)
+[![Zensical docs](https://img.shields.io/badge/Zensical-docs-purple)](https://zensical.org/)
+[![MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/pup-pack/pup-core/blob/main/LICENSE)
 
 [![CI](https://github.com/pup-pack/pup-core/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/pup-pack/pup-core/actions/workflows/ci-python-zensical.yml)
 [![Docs-Deploy](https://github.com/pup-pack/pup-core/actions/workflows/deploy-zensical.yml/badge.svg?branch=main)](https://github.com/pup-pack/pup-core/actions/workflows/deploy-zensical.yml)
@@ -18,7 +21,7 @@ src="https://raw.githubusercontent.com/pup-pack/pup-core/main/docs/images/pup.pn
 alt="pup logo"
 width="110">
 
-> Shared core library for opinionated professional Python project tools.
+> Shared core library for professional Python project tools.
 
 ## Purpose
 
@@ -27,28 +30,20 @@ This library centralizes functionality across tools, including:
 - repository root and project detection
 - `pyproject.toml` inspection
 - Python package and source-layout detection
+- Python source-file and module-docstring inspection
 - notebook detection
 - Python version normalization
 - project and package name normalization
 - safe repository-relative path handling
-- Git and repository metadata inspection
+- Git metadata and file-history inspection
+- GitHub Actions workflow and action-version inspection
+- canonical template discovery, layering, fetching, and rendering
+- reusable file and content comparison
 - managed file-section detection and manipulation
 - shared immutable types and errors
 
-`pup-core` contains shared mechanisms rather than project policy.
-
-The user-facing tools determine what should happen:
-
-- `pup-up` synchronizes professional project scaffolding with managed templates.
-- `pup-check` verifies that a project is internally consistent.
-- `pup-tidy` removes known generated artifacts when preparing teaching repositories for release.
-
-## Professional Python Project Tools
-
-- [pup-up](https://github.com/pup-pack/pup-up)
-- [pup-check](https://github.com/pup-pack/pup-check)
-- [pup-tidy](https://github.com/pup-pack/pup-tidy)
-- [templates](https://github.com/pup-pack/templates)
+`pup-core` contains shared repository inspection, template, comparison,
+metadata, Git-history, Python-source, and GitHub Actions mechanisms.
 
 ## Template Source
 
@@ -106,12 +101,12 @@ git push -u origin main
 
 ## Annotations
 
-[.annotations/annotations.md](./.annotations/annotations.md)
+[.annotations/annotations.md](https://github.com/pup-pack/pup-core/blob/main/.annotations/annotations.md)
 
 ## Citation
 
-[CITATION.cff](./CITATION.cff)
+[CITATION.cff](https://github.com/pup-pack/pup-core/blob/main/CITATION.cff)
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](https://github.com/pup-pack/pup-core/blob/main/LICENSE)

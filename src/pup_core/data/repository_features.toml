@@ -1,0 +1,102 @@
+# ============================================================
+# repository_features.toml
+# ============================================================
+# WHY: Human-readable catalog of repository intelligence exposed by pup-core.
+# OBS: The data describes WHAT pup-core inspects; Python modules implement HOW.
+
+[[categories]]
+name = "identity"
+module = "inspect.detect"
+description = "Repository root, name, owner, URLs, package identity, and class."
+features = [
+    "repository_root",
+    "repository_name",
+    "github_owner",
+    "repository_url",
+    "site_url",
+    "source_package",
+]
+
+[[categories]]
+name = "files"
+module = "inspect.files"
+description = "Repository files and authored paths."
+features = [
+    "repository_files",
+    "files_by_suffix",
+    "python_source_paths",
+]
+
+[[categories]]
+name = "git"
+module = "inspect.git"
+description = "Git metadata, remotes, working-tree state, and file history."
+features = [
+    "origin_url",
+    "github_owner",
+    "github_repo",
+    "tracked_files",
+    "untracked_files",
+    "ignored_files",
+    "dirty",
+    "file_last_changed",
+]
+
+[[categories]]
+name = "python"
+module = "inspect.python_source"
+description = "Python source files and source-level documentation."
+features = [
+    "source_files",
+    "module_docstrings",
+]
+
+[[categories]]
+name = "pyproject"
+module = "inspect.pyproject"
+description = "Project metadata, dependencies, tools, and build configuration."
+features = [
+    "project_name",
+    "requires_python",
+    "dependencies",
+    "dependency_groups",
+    "optional_dependencies",
+    "scripts",
+    "build_backend",
+    "tool_configuration",
+]
+
+[[categories]]
+name = "actions"
+module = "inspect.actions"
+description = "GitHub Actions workflows and referenced action versions."
+features = [
+    "workflow_files",
+    "workflow_names",
+    "referenced_actions",
+    "action_versions",
+    "action_version_style",
+]
+
+[[categories]]
+name = "templates"
+module = "templates"
+description = "Canonical template layers, files, fetching, and rendering."
+features = [
+    "template_source",
+    "template_snapshot",
+    "template_layers",
+    "effective_template_files",
+    "template_rendering",
+    "zensical_handling",
+]
+
+[[categories]]
+name = "comparison"
+module = "compare.files"
+description = "Reusable read-only file and history comparison."
+features = [
+    "file_presence",
+    "file_content",
+    "file_recency",
+]
