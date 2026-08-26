@@ -103,6 +103,14 @@ force-sort-within-sections = true
 [tool.ruff.lint.pydocstyle] # WHY: Use Google docstring style when D is enabled.
 convention = "google"
 
+# === UV (PYTHON ENVIRONMENT AND DEPENDENCY MANAGEMENT) ===
+
+[tool.uv]
+# WHY: Install all dependency groups defined by this repository by default.
+# OBS: This keeps the canonical `uv sync` command identical across project types
+#      and ensures all repository features work after setup.
+default-groups = "all"
+
 # ============================================================
 # SECTION 3: BUILD SYSTEM
 # ============================================================
