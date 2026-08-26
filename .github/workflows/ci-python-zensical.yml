@@ -1,7 +1,7 @@
 # ============================================================
 # .github/workflows/ci-python-zensical.yml (ALL-PY-SRC-REPOS)
 # ============================================================
-# Updated: 2026-08-18
+# Updated: 2026-08-26
 #
 # WHY: Continuous Integration (CI) ensures repository hygiene,
 #      Python correctness, testing, and documentation builds.
@@ -63,7 +63,7 @@ jobs:
 
       - name: A4) Install dependencies from committed lockfile
         run: uv sync --frozen
-        # WHY: Install all configured dependency groups exactly from uv.lock.
+        # WHY: Install all configured dependency groups from uv.lock.
         # REQ: CI MUST fail rather than update a stale or incompatible lockfile.
 
       - name: A5) Show tool versions
